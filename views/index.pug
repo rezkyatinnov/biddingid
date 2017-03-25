@@ -1,0 +1,144 @@
+extends layout
+
+block content
+	.orbit(role="region", aria-label="Favorite Space Pictures", data-orbit="")
+		ul.orbit-container
+			button.orbit-previous(aria-label="previous")
+				span.show-for-sr Previous Slide
+				| ◀
+			button.orbit-next(aria-label="next")
+				span.show-for-sr Next Slide
+				| ▶
+			li.orbit-slide.is-active
+				img(src="http://placehold.it/2000x750")
+			li.orbit-slide
+				img(src="http://placehold.it/2000x750")
+			li.orbit-slide
+				img(src="http://placehold.it/2000x750")
+			li.orbit-slide
+				img(src="http://placehold.it/2000x750")
+		.row.column.text-center
+			h2 Our Newest Products
+			hr
+		.row.small-up-2.large-up-4
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/fashion/1")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.expanded(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/fashion/2")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.expanded(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/fashion/3")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.expanded(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/fashion/4")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.expanded(href="#") Buy
+		hr
+		.row.column
+			.callout.primary
+				h3 Really big special this week on items.
+		hr
+		.row.column.text-center
+			h2 Some Other Neat Products
+			hr
+		.row.small-up-2.medium-up-3.large-up-6
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/food/")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.small.expanded.hollow(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/food/")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.small.expanded.hollow(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/food/")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.small.expanded.hollow(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/food")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.small.expanded.hollow(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/food")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.small.expanded.hollow(href="#") Buy
+			.column
+				img.thumbnail(src="http://lorempixel.com/300/400/food")
+				h5 Nulla At Nulla Justo, Eget
+				p $400
+				a.button.small.expanded.hollow(href="#") Buy
+		hr
+		.row
+			.medium-4.columns
+				h4 Top Products
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+			.medium-4.columns
+				h4 Top Products
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+			.medium-4.columns
+				h4 Top Products
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.
+				.media-object
+					.media-object-section
+						img.thumbnail(src="http://lorempixel.com/100/100/food")
+					.media-object-section
+						h5 Nunc Eu Ullamcorper Orci
+						p Quisque eget odio ac lectus vestibulum faucibus eget in metus. In pellentesque.

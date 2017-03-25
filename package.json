@@ -1,0 +1,25 @@
+{
+  "name": "letsbidit",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/letsbidit"
+  },
+  "dependencies": {
+    "body-parser": "~1.16.0",
+    "cookie-parser": "~1.4.3",
+    "dateformat": "^2.0.0",
+    "debug": "~2.6.0",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.6",
+    "express": "~4.14.1",
+    "express-session": "^1.15.1",
+    "jquery": "~3.1.1",
+    "morgan": "~1.7.0",
+    "pug": "~2.0.0-beta10",
+    "request": "^2.79.0",
+    "serve-favicon": "~2.3.2",
+    "socket.io": "^1.7.3",
+    "underscore": "^1.8.3"
+  }
+}

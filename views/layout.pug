@@ -1,0 +1,19 @@
+doctype html
+html.no-js(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1.0")
+		title Foundation | Welcome
+
+		block styles
+			link(rel="stylesheet", href=process.env.APP_BASE_URL+'/bower_components/foundation-sites/dist/css/foundation.min.css')
+	body
+		include topbar.pug
+		block content
+		include footer.pug
+
+		block script
+			script(src=process.env.APP_BASE_URL+'/bower_components/jquery/dist/jquery.min.js')
+			script(src=process.env.APP_BASE_URL+'/bower_components/foundation-sites/dist/js/foundation.min.js')
+			script.
+				$(document).foundation();
