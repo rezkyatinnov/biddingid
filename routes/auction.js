@@ -1,5 +1,5 @@
 /**
- * router for index
+ * router for auction
  *
  * @author Rezkya Tinnov <mailme@rezkyatinnov.com>
  */
@@ -11,7 +11,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', utilitiesfunc.buildLayoutParam("letsbidit", {}));
+    res.render('auction', utilitiesfunc.buildLayoutParam("letsbidit", {}));
+});
+router.get(routename.auctionNew.replace(routename.auction, ''), function(req, res, next) {
+    res.render('new-auction', utilitiesfunc.buildLayoutParam("letsbidit", {}));
 });
 
 module.exports = router;
