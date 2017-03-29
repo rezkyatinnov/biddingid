@@ -7,7 +7,10 @@ html.no-js(lang="en")
 
 		block styles
 			link(rel="stylesheet", href=process.env.APP_BASE_URL+'/bower_components/bootstrap/dist/css/bootstrap.min.css')
+			link(rel="stylesheet", href=process.env.APP_BASE_URL+'/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.css')
+			link(rel="stylesheet", href=process.env.APP_BASE_URL+'/bower_components/bootstrap-fileinput/css/fileinput.css')
 			link(rel="stylesheet", href=process.env.APP_BASE_URL+'/stylesheets/bootswatch-superhero.css')
+			link(rel="stylesheet", href=process.env.APP_BASE_URL+'/stylesheets/common.css')
 	body
 		.container
 			include topbar.pug
@@ -16,4 +19,9 @@ html.no-js(lang="en")
 
 		block script
 			script(src=process.env.APP_BASE_URL+'/bower_components/jquery/dist/jquery.min.js')
+			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js')
+			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap-fileinput/js/plugins/canvas-ro-blob.js')
+			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap-fileinput/js/plugins/purify.js')
+			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap-fileinput/js/plugins/sortable.js')
+			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap-fileinput/js/fileinput.js')
 			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap/dist/js/bootstrap.min.js')
