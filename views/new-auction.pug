@@ -1,16 +1,59 @@
 extends layout
 
 block content
-	.row
-		.col-md-6
-			.jumbotron
-				h3 Create New
-				p ...
-				p
-					a.btn.btn-primary.btn-lg(href="#", role="button") Create!
-		.col-md-6
-			.jumbotron
-				h3 Join Auction
-				p ...
-				p
-					a.btn.btn-primary.btn-lg(href="#", role="button") Join!
+	.panel.panel-default
+		.panel-heading
+			h3.panel-title Create new Auction
+		.panel-body
+			form.dropzone(action="/file-upload")
+				.fallback
+					input(name="file", type="file", multiple="")
+			form
+				.form-group
+					label(for='product-name-txt') Product Name
+					input#product-name-txt.form-control(type='text', name='product-name', placeholder='Goodie Goods')
+				.form-group
+					label(for='product-desc-txt') Product Description
+					textarea#product-desc-txt.form-control(type='text', name='product-desc', rows='10', placeholder='Goodie Goods desc')
+				.form-group
+					label(for='product-tags-txt') Tags
+					.match-parent-width
+						input#product-tags-txt.form-control(type='text', name='product-tags', data-role='tagsinput', placeholder='Goodie Goods')
+				
+
+				.form-group
+					label(for='product-price-txt') Open Bid Price
+					.input-group
+						.input-group-btn
+							select.btn.btn-default
+								option IDR
+								option USD
+						input#product-price-txt.form-control(type='text', name='product-price', placeholder='Goodie Goods')
+				.form-group
+					label(for='product-multiplier-txt') Multiplier
+					input#product-multiplier-txt.form-control(type='text', name='product-multiplier', placeholder='Goodie Goods')
+				.checkbox
+					label
+						input(type='checkbox')
+						|  Accept term &amp; conds
+				button.btn.btn-default(type='submit') Submit
+
+block append script
+	script.
+		$(document).on('ready', function() {
+			$("#input-24").fileinput({
+				initialPreview: [
+					'http://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/FullMoon2010.jpg/631px-FullMoon2010.jpg',
+					'http://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Earth_Eastern_Hemisphere.jpg/600px-Earth_Eastern_Hemisphere.jpg'
+				],
+				initialPreviewAsData: true,
+				initialPreviewConfig: [
+					{caption: "Moon.jpg", size: 930321, width: "120px", key: 1},
+					{caption: "Earth.jpg", size: 1218822, width: "120px", key: 2}
+				],
+				deleteUrl: "/site/file-delete",
+				overwriteInitial: false,
+				maxFileSize: 100,
+				initialCaption: "The Moon and the Earth"
+			});
+		});
