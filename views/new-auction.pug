@@ -5,10 +5,10 @@ block content
 		.panel-heading
 			h3.panel-title Create new Auction
 		.panel-body
+			form.dropzone(action="/file-upload")
+				.fallback
+					input(name="file", type="file", multiple="")
 			form
-				.form-group
-					label.control-label Photos
-					input#input-24.file-loading(name="input24[]", type="file", multiple="multiple")
 				.form-group
 					label(for='product-name-txt') Product Name
 					input#product-name-txt.form-control(type='text', name='product-name', placeholder='Goodie Goods')
