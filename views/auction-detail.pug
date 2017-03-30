@@ -1,0 +1,109 @@
+extends layout
+
+block content
+	.panel.panel-default
+		.panel-body
+			.row
+				.col-md-3
+					p.lead Shop Name
+					.list-group
+						a#summarytab.list-group-item(href="#") Summary
+						a#productdetailtab.list-group-item(href="#") Product Detail
+						a#leaderboardtab.list-group-item(href="#") Leaderboard
+				.col-md-9
+					#summarylyt.match-parent-width.hide
+						.thumbnail
+							img.img-responsive(src="http://placehold.it/800x300", alt="")
+							.caption-full
+								h4.pull-right $24.99
+								h4
+									a(href="#") Product Name
+								p
+									| See more snippets like these online store reviews at 
+									a(target="_blank", href="http://bootsnipp.com") Bootsnipp - http://bootsnipp.com
+									| .
+								p
+									| Want to make these reviews work? Check out
+									strong
+										a(href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/") this building a review system tutorial
+									| over at maxoffsky.com!
+								p
+									| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+							.ratings
+								p.pull-right 3 reviews
+								p
+									span.glyphicon.glyphicon-star
+									span.glyphicon.glyphicon-star
+									span.glyphicon.glyphicon-star
+									span.glyphicon.glyphicon-star
+									span.glyphicon.glyphicon-star-empty
+									|                             4.0 stars
+					#productdetaillyt.match-parent-width.hide
+					#leaderboardlyt.match-parent-width.hide
+						.row
+							.col-md-12
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star-empty
+								|                             Anonymous
+								span.pull-right 10 days ago
+								p This product was great in terms of quality. I would definitely buy another!
+						hr
+						.row
+							.col-md-12
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star-empty
+								|                             Anonymous
+								span.pull-right 12 days ago
+								p I've alredy ordered another one!
+						hr
+						.row
+							.col-md-12
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star
+								span.glyphicon.glyphicon-star-empty
+								|                             Anonymous
+								span.pull-right 15 days ago
+								p
+									| I've seen some better than this, but not at this price. I definitely recommend this item.
+
+block append scripts
+	script.
+		$(function(){
+			showDomById('summarylyt');
+			$('#summarytab').addClass('active')
+		});
+
+		$( "#summarytab" ).on( "click", function() {
+			showDomById('summarylyt');
+			hideDomById('productdetaillyt');
+			hideDomById('leaderboardlyt');
+			$('#summarytab').addClass('active')
+			$('#productdetailtab').removeClass('active')
+			$('#leaderboardtab').removeClass('active')
+		});
+
+		$( "#productdetailtab" ).on( "click", function() {
+			hideDomById('summarylyt');
+			showDomById('productdetaillyt');
+			hideDomById('leaderboardlyt');
+			$('#summarytab').removeClass('active')
+			$('#productdetailtab').addClass('active')
+			$('#leaderboardtab').removeClass('active')
+		});
+
+		$( "#leaderboardtab" ).on( "click", function() {
+			hideDomById('summarylyt');
+			hideDomById('productdetaillyt');
+			showDomById('leaderboardlyt');
+			$('#summarytab').removeClass('active')
+			$('#productdetailtab').removeClass('active')
+			$('#leaderboardtab').addClass('active')
+		});

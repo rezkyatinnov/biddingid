@@ -18,8 +18,9 @@ html.no-js(lang="en")
 			block content
 			//- include footer.pug
 
-		block script
+		block scripts
 			script(src=process.env.APP_BASE_URL+'/bower_components/jquery/dist/jquery.min.js')
 			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap-tagsinput/dist/bootstrap-tagsinput.js')
 			script(src=process.env.APP_BASE_URL+'/bower_components/dropzone/dist/dropzone.js')
 			script(src=process.env.APP_BASE_URL+'/bower_components/bootstrap/dist/js/bootstrap.min.js')
+			script(src=process.env.APP_BASE_URL+'/javascripts/common.js')

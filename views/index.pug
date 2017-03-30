@@ -11,6 +11,8 @@ block content
 		.col-md-6
 			.jumbotron
 				h3 Join Auction
-				p ...
-				p
-					a.btn.btn-primary.btn-lg(href=process.env.APP_BASE_URL+routename.auctionSession, role="button") Join!
+				form(action=process.env.APP_BASE_URL+routename.auction, method='POST')
+					.input-group
+						input#session-id.form-control(type='text', name='session-id', placeholder='Session ID')
+						.input-group-btn
+							input.btn.btn-primary(type='submit', value='Join !')
